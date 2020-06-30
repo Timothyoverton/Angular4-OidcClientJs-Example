@@ -41,12 +41,13 @@ export class AuthService {
 
 export function getClientSettings(): UserManagerSettings {
   return {
-    authority: 'http://localhost:5555/',
-    client_id: 'angular_spa',
+    authority: 'https://identity-dev.businessfitness.com.au/',
+    //authority: 'https://localhost:44321/',
+    client_id: 'hnx-web',
     redirect_uri: 'http://localhost:4200/auth-callback',
     post_logout_redirect_uri: 'http://localhost:4200/',
     response_type: "code",
-    scope: "openid profile api1",
+    scope: "openid profile hnx-hub-api",
     filterProtocolClaims: true,
     loadUserInfo: true
   };
